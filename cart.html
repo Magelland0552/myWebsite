@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Shoes & Phones Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Shoes & Phones</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html?category=shoe">Shoes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html?category=phone">Phones</a>
+                    </li>
+                </ul>
+                <a href="cart.html" class="btn btn-outline-dark">
+                    <i class="fas fa-shopping-cart"></i> Cart
+                    <span id="cart-count" class="badge bg-dark">0</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Your Shopping Cart</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div id="cart-items">
+                                <!-- Cart items will be loaded here by JavaScript -->
+                                <div class="text-center py-5" id="empty-cart-message">
+                                    <i class="fas fa-shopping-cart fa-3x mb-3 text-muted"></i>
+                                    <h4>Your cart is empty</h4>
+                                    <p>Looks like you haven't added anything to your cart yet</p>
+                                    <a href="products.html" class="btn btn-primary">Continue Shopping</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Order Summary</h5>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Subtotal:</span>
+                                <span id="subtotal">$0.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Shipping:</span>
+                                <span>Free</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between mb-3">
+                                <strong>Total:</strong>
+                                <strong id="total">$0.00</strong>
+                            </div>
+                            <a href="checkout.html" class="btn btn-primary w-100" id="checkout-btn">Proceed to
+                                Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>About Us</h5>
+                    <p>Your one-stop shop for quality shoes and phones at affordable prices.</p>
+                </div>
+                <div class="col-md-6">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-phone"></i> +1234567890</p>
+                    <p><i class="fas fa-envelope"></i> contact@shoesphones.com</p>
+                    <a href="https://wa.me/1234567890" class="btn btn-success">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>
