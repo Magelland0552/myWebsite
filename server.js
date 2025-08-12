@@ -1,7 +1,4 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const db = require('./db');
+
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -114,4 +111,5 @@ router.delete('/:id', async (req, res) => {
 
 
 module.exports = router;
+
 
