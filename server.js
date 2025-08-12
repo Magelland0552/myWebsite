@@ -2,7 +2,31 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const db = require('./db');
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const db = require('./db');
 
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
+
+// Routes
+app.use('/api/products', require('./routes/products'));
+app.use('/api/orders', require('./routes/orders'));
+
+// Start server
+db.connect().then(() => {
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+    });
+}).catch(err => {
+    console.error('Database connection failed', err);
+    process.exit(1);
+});
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -90,3 +114,4 @@ router.delete('/:id', async (req, res) => {
 
 
 module.exports = router;
+
