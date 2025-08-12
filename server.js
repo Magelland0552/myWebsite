@@ -24,10 +24,6 @@ db.connect().then(() => {
     process.exit(1);
 });
 
-//routes
-const express = require('express');
-const router = express.Router();
-const db = require('../db');
 
 // Get all products
 router.get('/', async (req, res) => {
@@ -91,5 +87,6 @@ router.delete('/:id', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+
 
 module.exports = router;
